@@ -407,13 +407,29 @@ export default function Header() {
           </button>
         </div>
 
-                                          {/* Mobile Icons - Search, Account and Cart */}
+                                          {/* Mobile Icons - Cart, Search, Account */}
                  <div className="mobile-icons" style={{
                    display: 'none',
                    alignItems: 'center',
                    gap: '2px',
                    marginRight: '-170px'
                  }}>
+                   <button
+                     style={{
+                       background: "none",
+                       border: "none",
+                       cursor: "pointer",
+                       padding: "0.5rem",
+                       transition: "background-color 0.2s ease"
+                     }}
+                     aria-label="Panier"
+                   >
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
+                       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                       <line x1="3" y1="6" x2="21" y2="6"></line>
+                       <path d="M16 10a4 4 0 0 1-8 0"></path>
+                     </svg>
+                   </button>
                    <button
                      style={{
                        background: "none",
@@ -442,22 +458,6 @@ export default function Header() {
                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                        <circle cx="12" cy="7" r="4"></circle>
-                     </svg>
-                   </button>
-                   <button
-                     style={{
-                       background: "none",
-                       border: "none",
-                       cursor: "pointer",
-                       padding: "0.5rem",
-                       transition: "background-color 0.2s ease"
-                     }}
-                     aria-label="Panier"
-                   >
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
-                       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                       <line x1="3" y1="6" x2="21" y2="6"></line>
-                       <path d="M16 10a4 4 0 0 1-8 0"></path>
                      </svg>
                    </button>
                  </div>
