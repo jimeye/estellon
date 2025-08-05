@@ -264,12 +264,12 @@ export default function Header() {
                           ))}
                         </ul>
                       </div>
-                                                     <div style={{
-                                 flex: "1",
-                                 paddingLeft: "8rem",
-                                 paddingRight: "2rem",
-                                 textAlign: "left"
-                               }}>
+                                                                           <div style={{
+                        flex: "1",
+                        paddingLeft: "8rem",
+                        paddingRight: "2rem",
+                        textAlign: "left"
+                      }}>
                         <div style={{
                           fontSize: "14px",
                           color: "#666",
@@ -407,45 +407,7 @@ export default function Header() {
           </button>
         </div>
 
-                                          {/* Mobile Icons - Cart, Search */}
-                 <div className="mobile-icons" style={{
-                   display: 'none',
-                   alignItems: 'center',
-                   gap: '2px',
-                   marginRight: '-170px'
-                 }}>
-                   <button
-                     style={{
-                       background: "none",
-                       border: "none",
-                       cursor: "pointer",
-                       padding: "0.5rem",
-                       transition: "background-color 0.2s ease"
-                     }}
-                     aria-label="Panier"
-                   >
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
-                       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                       <line x1="3" y1="6" x2="21" y2="6"></line>
-                       <path d="M16 10a4 4 0 0 1-8 0"></path>
-                     </svg>
-                   </button>
-                   <button
-                     style={{
-                       background: "none",
-                       border: "none",
-                       cursor: "pointer",
-                       padding: "0.5rem",
-                       transition: "background-color 0.2s ease"
-                     }}
-                     aria-label="Rechercher"
-                   >
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
-                       <circle cx="11" cy="11" r="8"></circle>
-                       <path d="m21 21-4.35-4.35"></path>
-                     </svg>
-                   </button>
-                 </div>
+                         
 
                  {/* Mobile Menu Button */}
                  <button

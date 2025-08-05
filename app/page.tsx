@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import CarouselInde from '@/components/CarouselInde'
 
 export default function Home() {
   return (
@@ -40,16 +39,15 @@ export default function Home() {
             display: 'inline-block',
             position: 'relative'
           }}>
-            <span className="underline-animated" style={{
+            <span className="estellon-text-animated" style={{
               display: 'inline-block'
             }}>
-              ESTELLON - LUXURY BAGS & ACCESSORIES - ESTELLON - LUXURY BAGS & ACCESSORIES - ESTELLON - LUXURY BAGS & ACCESSORIES
+              Estellon - Luxury Bags & Accessories - Estellon - Luxury Bags & Accessories - Estellon - Luxury Bags & Accessories
             </span>
           </div>
         </div>
         
-        {/* Carrousel Inde */}
-        <CarouselInde />
+
       </div>
     </div>
   )

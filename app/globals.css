@@ -115,4 +115,120 @@ a {
 
 .underline-animated:hover::after {
   width: 100% !important;
+}
+
+/* Animation de rotation et salto pour le texte Estellon */
+@keyframes rotate-pirouette {
+  0% { 
+    transform: rotate(0deg) translateY(0px); 
+  }
+  12.5% { 
+    transform: rotate(45deg) translateY(-10px); 
+  }
+  25% { 
+    transform: rotate(90deg) translateY(-20px); 
+  }
+  37.5% { 
+    transform: rotate(135deg) translateY(-30px); 
+  }
+  50% { 
+    transform: rotate(180deg) translateY(-40px); 
+  }
+  62.5% { 
+    transform: rotate(225deg) translateY(-30px); 
+  }
+  75% { 
+    transform: rotate(270deg) translateY(-20px); 
+  }
+  87.5% { 
+    transform: rotate(315deg) translateY(-10px); 
+  }
+  100% { 
+    transform: rotate(720deg) translateY(0px); 
+  }
+}
+
+@keyframes salto {
+  0% { 
+    transform: rotate(0deg) translateY(0px) scale(1); 
+  }
+  25% { 
+    transform: rotate(-90deg) translateY(-30px) scale(1.1); 
+  }
+  50% { 
+    transform: rotate(-180deg) translateY(-60px) scale(1.2); 
+  }
+  75% { 
+    transform: rotate(-270deg) translateY(-30px) scale(1.1); 
+  }
+  100% { 
+    transform: rotate(-360deg) translateY(0px) scale(1); 
+  }
+}
+
+@keyframes counter-clockwise-scroll {
+  0% { 
+    transform: rotate(0deg) translateX(0px) translateY(0px); 
+  }
+  25% { 
+    transform: rotate(-90deg) translateX(-30px) translateY(-20px); 
+  }
+  50% { 
+    transform: rotate(-180deg) translateX(-60px) translateY(-40px); 
+  }
+  75% { 
+    transform: rotate(-270deg) translateX(-30px) translateY(-20px); 
+  }
+  100% { 
+    transform: rotate(-360deg) translateX(0px) translateY(0px); 
+  }
+}
+
+@keyframes text-scroll {
+  0% { 
+    transform: translateX(100vw); 
+  }
+  100% { 
+    transform: translateX(-100vw); 
+  }
+}
+
+.estellon-text-animated {
+  animation: counter-clockwise-scroll 25s ease-in-out infinite, text-scroll 35s linear infinite;
+  display: inline-block;
+  transform-origin: center;
+  font-family: "HelveticaNeue", helvetic, sans-serif;
+  font-weight: 1200;
+  font-size: 60px;
+  line-height: 85px;
+  color: rgb(34, 34, 34);
+  font-style: normal;
+  letter-spacing: -4px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+}
+
+/* Responsive design pour le texte animé */
+@media (max-width: 1200px) {
+  .estellon-text-animated {
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: -3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .estellon-text-animated {
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .estellon-text-animated {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
 } 
