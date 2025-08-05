@@ -407,7 +407,7 @@ export default function Header() {
           </button>
         </div>
 
-                                          {/* Mobile Icons - Cart, Search, Account */}
+                                          {/* Mobile Icons - Cart, Search */}
                  <div className="mobile-icons" style={{
                    display: 'none',
                    alignItems: 'center',
@@ -443,21 +443,6 @@ export default function Header() {
                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
                        <circle cx="11" cy="11" r="8"></circle>
                        <path d="m21 21-4.35-4.35"></path>
-                     </svg>
-                   </button>
-                   <button
-                     style={{
-                       background: "none",
-                       border: "none",
-                       cursor: "pointer",
-                       padding: "0.5rem",
-                       transition: "background-color 0.2s ease"
-                     }}
-                     aria-label="Mon compte"
-                   >
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
-                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                       <circle cx="12" cy="7" r="4"></circle>
                      </svg>
                    </button>
                  </div>
@@ -520,24 +505,46 @@ export default function Header() {
                     style={{ objectFit: 'contain' }}
                   />
                 </Link>
-                <button
-                  onClick={toggleMobileMenu}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    padding: "0.5rem",
-                    borderRadius: "4px",
-                    transition: "background-color 0.2s ease",
-                    marginRight: "-45px"
-                  }}
-                  aria-label="Fermer le menu"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </button>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}>
+                  <button
+                    style={{
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "0.5rem",
+                      borderRadius: "4px",
+                      transition: "background-color 0.2s ease"
+                    }}
+                    aria-label="Mon compte"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </button>
+                  <button
+                    onClick={toggleMobileMenu}
+                    style={{
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "0.5rem",
+                      borderRadius: "4px",
+                      transition: "background-color 0.2s ease",
+                      marginRight: "-45px"
+                    }}
+                    aria-label="Fermer le menu"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                </div>
               </div>
               
                                      {/* Main Categories */}
