@@ -519,6 +519,39 @@ export default function Header() {
                       borderRadius: "4px",
                       transition: "background-color 0.2s ease"
                     }}
+                    aria-label="Panier"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
+                      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                      <line x1="3" y1="6" x2="21" y2="6"></line>
+                      <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                  </button>
+                  <button
+                    style={{
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "0.5rem",
+                      borderRadius: "4px",
+                      transition: "background-color 0.2s ease"
+                    }}
+                    aria-label="Rechercher"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                  </button>
+                  <button
+                    style={{
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "0.5rem",
+                      borderRadius: "4px",
+                      transition: "background-color 0.2s ease"
+                    }}
                     aria-label="Mon compte"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2">
@@ -568,6 +601,7 @@ export default function Header() {
                                marginLeft: "-4rem"
                              }}
                              onClick={() => toggleMenu(index)}
+                             onMouseEnter={() => handleMouseEnter(index)}
                              >
                                <span>{item.label}</span>
                                <span style={{ 
