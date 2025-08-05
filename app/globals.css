@@ -106,16 +106,30 @@ a {
 .underline-animated::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 0;
   width: 0%;
-  height: 4px;
-  background-color: #000000;
-  animation: underline-pulse 2s ease-in-out infinite;
-  transition: width 0.3s ease;
+  height: 2px;
+  background-color: #666;
+  animation: underline-pulse 3s ease-in-out infinite;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
 
 .underline-animated:hover::after {
+  width: 100% !important;
+  background-color: #000000;
+}
+
+.underline-animated.active::after {
+  width: 100% !important;
+  background-color: #000000;
+}
+
+.underline-animated:hover::after {
+  width: 100% !important;
+}
+
+.underline-animated.active::after {
   width: 100% !important;
 }
 

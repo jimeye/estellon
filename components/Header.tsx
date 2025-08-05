@@ -167,23 +167,13 @@ export default function Header() {
                                aria-expanded={openIndex === index}
                                aria-controls={`submenu-${index}`}
                                aria-haspopup="true"
-                               className="underline-animated-small"
+                               className="underline-animated"
                              >
                       <span style={{
                         position: "relative",
                         display: "inline-block"
                       }}>
                         {item.label}
-                        <span style={{
-                          position: "absolute",
-                          bottom: "-2px",
-                          left: "0",
-                          width: "0%",
-                          height: "2px",
-                          backgroundColor: "#333",
-                          transition: "width 0.3s ease",
-                          ...(openIndex === index && { width: "100%" })
-                        }}></span>
                       </span>
                       <span style={{ 
                         fontSize: "12px",
@@ -419,7 +409,9 @@ export default function Header() {
                      border: "none",
                      cursor: "pointer",
                      padding: "0.5rem",
-                     marginRight: '15px'
+                     marginLeft: "60px",
+                     position: "relative",
+                     left: "16px"
                    }}
                    aria-label="Menu mobile"
                  >
@@ -560,10 +552,12 @@ export default function Header() {
                                alignItems: "center",
                                width: "100%",
                                cursor: "pointer",
-                               marginLeft: "-4rem"
+                               marginLeft: "-4rem",
+                               position: "relative"
                              }}
                              onClick={() => toggleMenu(index)}
                              onMouseEnter={() => handleMouseEnter(index)}
+                             className={`underline-animated ${openIndex === index ? 'active' : ''}`}
                              >
                                <span>{item.label}</span>
                                <span style={{ 
@@ -583,7 +577,7 @@ export default function Header() {
                                }}>
                                  {item.items.map((sub) => (
                                    <div key={sub.label} style={{
-                                     marginBottom: '0.8rem'
+                                     marginBottom: '0.3rem'
                                    }}>
                                      <Link
                                        href={sub.href || "#"}
@@ -592,7 +586,7 @@ export default function Header() {
                                          color: "#000000",
                                          textDecoration: "none",
                                          display: "block",
-                                         padding: "0.5rem 0",
+                                         padding: "0.2rem 0",
                                          fontWeight: "bold"
                                        }}
                                        onClick={toggleMobileMenu}
