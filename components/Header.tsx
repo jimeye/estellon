@@ -91,7 +91,7 @@ export default function Header() {
       
       <header style={{ 
         backgroundColor: '#f9f7f2', 
-        padding: '0.1rem 0.5rem', 
+        padding: '0.5rem 1rem', 
         position: 'fixed',
         top: '40px',
         left: 0,

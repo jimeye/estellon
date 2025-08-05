@@ -72,9 +72,11 @@ a {
 /* Mobile styles for hero image */
 @media (max-width: 768px) {
   .hero-image {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1.1;
     object-fit: cover;
-    object-position: right center;
+    object-position: center;
+    width: 100%;
+    height: auto;
   }
 }
 
